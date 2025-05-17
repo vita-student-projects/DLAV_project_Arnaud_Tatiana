@@ -66,4 +66,7 @@ Best ADE Achieved on validation dataset: 1.965
 ### Running instructions:  
 The training routine is defined in the train function. Run all the necessary cells (e.g. DrivingDataset, model architecture,  etc.) to view the results of the implementation, including loss, ADE and FDE. Our best model is saved in the drive and later loaded (DrivingPlanner) to run the final visualization cells.  
 
-Since the last models were trained on the SCITAS sever due to limited Google Colab ressources, the Jupyter notebook is not run (although it contains all the neccessary code) and the best model output is available in the log file.
+Since the last models were trained on the SCITAS sever due to limited Google Colab ressources, the Jupyter notebook is not run (although it contains all the neccessary code) and the best model output is available in the log file.  
+
+#### Group:
+Arnaud Sandell (arnvo) and Tatiana Pina Cunha (TatyPC)
