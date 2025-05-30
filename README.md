@@ -64,7 +64,7 @@ The training routine is defined in the train function. Run all the necessary cel
 Since the last models were trained on the SCITAS sever due to limited Google Colab ressources, the Jupyter notebook is not run (although it contains all the neccessary code) and the best model output is available in the log file.  
 
 
-### Results
+## Results
 
 The relatively simple architecture used for this project already worked quite well, achieving a final ADE of 1.59. Additional auxiliary perception task did not enhanced the performance, however data augmentation prooved quite effective at generalizing to real-world data.  
 
@@ -77,7 +77,7 @@ When looking more in details however, we noticed the performance of the model de
 As the results show, the model performs well on the two first clusters as they are easy to predict. Indeed, these cases can be easily interpreted with recognisable pattern: quickly decreasing velocity when coming to a stop, lots of cars when stuck in traffic, long large road for highway (prediction is the logic continuation of the history), etc...  
 However, when accelarating at a crossroad of at sharp turns, the model performs worse.  
 
-### Conclusion
+## Conclusion
 
 Altough the model is quite basic, it does perfom quite well for simple situations, which happen the majority of the time. However, an automonous vehicle must be safe in all situation, especially in the complex, more dangerous ones. To improve this performance, the model could be further refined: better implementation of auxiliary losses for both depth map and segmentation (which would also help to understand the stong and weak points of the model), auto-regressor encoder, etc..  
 Another way to improve the performance would be to better preprocess the data. The addition of the velocity in the vehicle motion history input did improve the performance, more meaningful features could be manually precalculated and used in the model (accelaration, lateral velocity, etc..). The training dataset could also be rebalanced: about 80% of the dataset represents simple trajectories. These are easier to predict and do not need too much example, whereas the complex trajectories (which are harder to predict and would need more examples) are underrepresented.   
